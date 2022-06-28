@@ -1,4 +1,4 @@
-import "./App.css";
+import "./screen.css";
 export default function Screen() {
   return (
     <>

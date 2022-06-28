@@ -1,14 +1,15 @@
-import "./App.css";
+import "./themebar.css";
 
-export default function ThemeBar() {
+export default function ThemeBar(props) {
   return (
-    <div className="theme-container">
+    <div className="themebar">
       <h3>calc</h3>
-      <div>
-        <label style={{}} for="theme">
+      <div id="theme-container">
+        <label className="theme-label" htmlFor="theme">
           Theme
         </label>
         <input
+          onChange={() => props.handleClick(this)}
           type="range"
           id="theme"
           name="theme"

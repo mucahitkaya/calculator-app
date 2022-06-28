@@ -1,9 +1,9 @@
-import "./App.css";
+import "./keyboard.css";
 
 export default function Keyboard() {
   return (
     <>
-      <div classname="wrapper">asd</div>
+      <div className="wrapper">asd</div>
     </>
   );
 }
