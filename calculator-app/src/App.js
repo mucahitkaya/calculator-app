@@ -1,11 +1,15 @@
 import "./App.css";
-import theme from "./assets/theme1.jpg";
+// import theme from "./assets/theme1.jpg";
+import Keyboard from "./Keyboard";
+import Screen from "./Screen";
+import ThemeBar from "./ThemeBar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hellouu</h1>
-      <img src={theme} alt="as" />
+      <ThemeBar />
+      <Screen />
+      <Keyboard />
     </div>
   );
 }
