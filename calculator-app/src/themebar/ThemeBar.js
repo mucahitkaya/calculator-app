@@ -9,7 +9,7 @@ export default function ThemeBar(props) {
           Theme
         </label>
         <input
-          onChange={() => props.handleClick(this)}
+          onChange={(event) => props.handleClick(event.target)}
           type="range"
           id="theme"
           name="theme"
