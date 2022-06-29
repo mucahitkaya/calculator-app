@@ -26,17 +26,6 @@
   --theme2-delshadow: hsl(184.8, 58.14%, 25.29%);
   --theme2-equalbg: hsl(25.03, 100%, 60.98%);
   --theme2-equalshadow: hsl(23.73, 94.37%, 27.84%);
-
-  --theme3-bg: hsl(268.33, 75%, 9.41%);
-  --theme3-screen: hsl(268.7, 74.19%, 12.16%);
-  --theme3-keyboardbg: hsl(268.7, 74.19%, 12.16%);
-  --theme3-buttonbg: hsl(268.8, 48.08%, 20.39%);
-  --theme3-buttonshadow: hsl(289.18, 65.59%, 36.47%);
-  --theme3-buttonfont: hsl(50.43, 100%, 63.14%);
-  --theme3-delbg: hsl(280.16, 56.44%, 44.12%);
-  --theme3-delshadow: hsl(289.18, 65.59%, 36.47%);
-  --theme3-equalbg: hsl(176.64, 100%, 79.02%);
-  --theme3-equalshadow: hsl(190.84, 33.6%, 48.43%);
 }
 
 .App {

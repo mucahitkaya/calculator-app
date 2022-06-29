@@ -2,8 +2,8 @@ import "./themebar.css";
 
 export default function ThemeBar(props) {
   return (
-    <div className="themebar">
-      <h3>calc</h3>
+    <div className={`themebar ${props.theme}`}>
+      <h3 className={`${props.theme}`}>calc</h3>
       <div id="theme-container">
         <label className="theme-label" htmlFor="theme">
           Theme
@@ -14,7 +14,7 @@ export default function ThemeBar(props) {
           id="theme"
           name="theme"
           min="0"
-          max="2"
+          max="1"
           step="1"
           list="tickmarks"
         ></input>

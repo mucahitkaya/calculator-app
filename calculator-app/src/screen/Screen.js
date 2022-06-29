@@ -1,8 +1,8 @@
 import "./screen.css";
-export default function Screen() {
+export default function Screen(props) {
   return (
-    <>
-      <div>lalala</div>
-    </>
+    <div className={`screen ${props.theme}`}>
+      <h3>Screen</h3>
+    </div>
   );
 }

@@ -5,20 +5,23 @@ import Screen from "./screen/Screen";
 import ThemeBar from "./themebar/ThemeBar";
 
 function App() {
-  const [theme, setTheme] = useState(`hsl(223.9, 25.79%, 31.18%);`);
+  const body = document.body;
+  const darkTheme = "dark";
+  const lightTheme = "light";
+
+  const [themeStatus, setThemeStatus] = useState(true);
 
   function handleClick(e) {
-    e.value === "0"
-      ? setTheme(`hsl(223.9, 25.79%, 31.18%);`)
-      : console.log(theme);
-    e.value === "1" ? setTheme(`hsl(0, 0%, 90.2%);`) : console.log(theme);
-    e.value === "2" ? setTheme(`hsl(268.33, 75%, 9.41%);`) : console.log(theme);
+    if (e.value === "0") setThemeStatus(true);
+    else setThemeStatus(false);
   }
   return (
-    <div className="App" style={{ backgroundColor: `${theme}` }}>
-      <h1>{theme}</h1>
-      <ThemeBar handleClick={handleClick} />
-      <Screen />
+    <div className="App">
+      <ThemeBar
+        handleClick={handleClick}
+        theme={themeStatus ? darkTheme : lightTheme}
+      />
+      <Screen theme={themeStatus ? darkTheme : lightTheme} />
       <Keyboard />
     </div>
   );
