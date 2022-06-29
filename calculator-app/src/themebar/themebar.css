@@ -33,7 +33,7 @@ input[type="range"] {
   -webkit-appearance: none;
   background: var(--theme1-screen);
   height: 20px;
-  width: 60px;
+  width: 40px;
   border-radius: 10px;
 }
 input[type="range"]::-webkit-slider-thumb {
@@ -53,7 +53,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 .theme-label {
   font-size: 24px;
-  margin-right: 10px;
+  margin: 0px 10px;
 }
 
 .themebar {
@@ -72,8 +72,10 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 .dark {
   background-color: var(--theme1-bg);
-  color: var(--theme1-equalbg);
 }
 .dark input[type="range"] {
   background-color: var(--theme1-screen);
+}
+.light {
+  color: var(--theme2-buttonfont);
 }

@@ -34,9 +34,19 @@
   margin: 1em;
   width: 500px;
   height: 100px;
+  border-radius: 10px;
 }
 
 .screen h3 {
   position: absolute;
-  right: 2em;
+  top: 1em;
+  right: 1em;
+}
+
+.dark.screen {
+  background-color: var(--theme1-screen);
+}
+.light.screen {
+  background-color: var(--theme2-screen);
+  color: var(--theme2-buttonfont);
 }

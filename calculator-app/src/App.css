@@ -29,7 +29,6 @@
 }
 
 .App {
-  background-color: var(--theme1-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,4 +36,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.dark {
+  background-color: var(--theme1-bg);
+}
+.light {
+  background-color: var(--theme2-bg);
 }

@@ -6,7 +6,7 @@ export default function ThemeBar(props) {
       <h3 className={`${props.theme}`}>calc</h3>
       <div id="theme-container">
         <label className="theme-label" htmlFor="theme">
-          Theme
+          Dark
         </label>
         <input
           onChange={(event) => props.handleClick(event.target)}
@@ -18,6 +18,9 @@ export default function ThemeBar(props) {
           step="1"
           list="tickmarks"
         ></input>
+        <label className="theme-label" htmlFor="theme">
+          Light
+        </label>
       </div>
     </div>
   );

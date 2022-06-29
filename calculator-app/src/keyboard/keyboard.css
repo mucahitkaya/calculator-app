@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  --theme1-bg: hsl(223.9, 25.79%, 31.18%);
+  --theme1-screen: hsl(223.85, 35.14%, 14.51%);
+  --theme1-keyboardbg: hsl(224.52, 29.52%, 20.59%);
+  --theme1-buttonbg: hsl(32, 26.32%, 88.82%);
+  --theme1-buttonshadow: hsl(24.44, 15.08%, 64.9%);
+  --theme1-buttonfont: hsl(223.2, 15.72%, 31.18%);
+  --theme1-delbg: hsl(224.06, 52.46%, 76.08%);
+  --theme1-delshadow: hsl(225.6, 27.47%, 35.69%);
+  --theme1-equalbg: hsl(6.46, 92.94%, 66.67%);
+  --theme1-equalshadow: hsl(5.95, 71.6%, 33.14%);
+
+  --theme2-bg: hsl(0, 0%, 90.2%);
+  --theme2-screen: hsl(0, 0%, 93.33%);
+  --theme2-keyboardbg: hsl(0, 6.38%, 81.57%);
+  --theme2-buttonbg: hsl(48, 8.77%, 88.82%);
+  --theme2-buttonshadow: hsl(28.42, 9.74%, 61.76%);
+  --theme2-buttonfont: hsl(51.43, 6.19%, 22.16%);
+  --theme2-delbg: hsl(185.27, 40.81%, 56.27%);
+  --theme2-delshadow: hsl(184.8, 58.14%, 25.29%);
+  --theme2-equalbg: hsl(25.03, 100%, 60.98%);
+  --theme2-equalshadow: hsl(23.73, 94.37%, 27.84%);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.buttons {
+  font-size: 0.8em;
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+}
+.wrapper #classicbutton {
+  background-color: var(--theme2-buttonbg);
+}
+
+.wrapper #classicbutton {
+  background-color: var(--theme2-buttonbg);
+}
+
+.keyboardbg .dark {
+  background-color: var(--theme1-keyboardbg);
+  border-radius: 10px;
+}
+.keyboardbg .light {
+  background-color: var(--theme2-keyboardbg);
+  border-radius: 10px;
+}
+
+.lastrow {
+  display: flex;
+  justify-content: space-between;
+  width: 122px;
+}
+.wrapper #del {
+  background-color: var(--theme1-delbg);
+}
+.lastrow #reset {
+  width: 200px;
+  background-color: var(--theme1-delbg);
+}
+#equal {
+  width: 80px;
+}
+.lastrow #equal {
+  background-color: var(--theme1-equalbg);
+}

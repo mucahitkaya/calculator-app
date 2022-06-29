@@ -5,24 +5,32 @@ import Screen from "./screen/Screen";
 import ThemeBar from "./themebar/ThemeBar";
 
 function App() {
-  const body = document.body;
+  const body = document.getElementsByClassName("App");
   const darkTheme = "dark";
   const lightTheme = "light";
 
   const [themeStatus, setThemeStatus] = useState(true);
 
   function handleClick(e) {
-    if (e.value === "0") setThemeStatus(true);
-    else setThemeStatus(false);
+    console.log(e.type);
+    if (e.name === "theme") {
+      if (e.value === "0") setThemeStatus(false);
+      else setThemeStatus(true);
+    } else if (e.type === "submit") {
+      console.log(e.textContent);
+    }
   }
   return (
-    <div className="App">
+    <div className={`App ${themeStatus ? lightTheme : darkTheme}`}>
       <ThemeBar
         handleClick={handleClick}
-        theme={themeStatus ? darkTheme : lightTheme}
+        theme={themeStatus ? lightTheme : darkTheme}
       />
-      <Screen theme={themeStatus ? darkTheme : lightTheme} />
-      <Keyboard />
+      <Screen theme={themeStatus ? lightTheme : darkTheme} />
+      <Keyboard
+        handleClick={handleClick}
+        theme={themeStatus ? lightTheme : darkTheme}
+      />
     </div>
   );
 }
