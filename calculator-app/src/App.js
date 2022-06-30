@@ -17,7 +17,8 @@ function App() {
       if (e.value === "0") setThemeStatus(false);
       else setThemeStatus(true);
     } else if (e.type === "submit") {
-      setValue(e.textContent);
+      console.log(value);
+      setValue((aha) => aha + `${e.textContent}`);
     }
   }
 
