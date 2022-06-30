@@ -10,23 +10,26 @@ function App() {
   const lightTheme = "light";
 
   const [themeStatus, setThemeStatus] = useState(true);
+  const [value, setValue] = useState("0");
 
   function handleClick(e) {
-    console.log(e.type);
     if (e.name === "theme") {
       if (e.value === "0") setThemeStatus(false);
       else setThemeStatus(true);
     } else if (e.type === "submit") {
-      console.log(e.textContent);
+      setValue(e.textContent);
     }
   }
+
+  function adds(number) {}
+
   return (
     <div className={`App ${themeStatus ? lightTheme : darkTheme}`}>
       <ThemeBar
         handleClick={handleClick}
         theme={themeStatus ? lightTheme : darkTheme}
       />
-      <Screen theme={themeStatus ? lightTheme : darkTheme} />
+      <Screen value={value} theme={themeStatus ? lightTheme : darkTheme} />
       <Keyboard
         handleClick={handleClick}
         theme={themeStatus ? lightTheme : darkTheme}

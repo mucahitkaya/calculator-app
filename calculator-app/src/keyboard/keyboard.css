@@ -43,12 +43,14 @@
   border: none;
   border-radius: 10px;
 }
-.wrapper #classicbutton {
-  background-color: var(--theme2-buttonbg);
+.dark #classicbutton {
+  background-color: var(--theme1-buttonbg);
+  box-shadow: 0px 3px 2px var(--theme1-buttonshadow);
 }
 
-.wrapper #classicbutton {
+.light #classicbutton {
   background-color: var(--theme2-buttonbg);
+  box-shadow: 0px 3px 2px var(--theme2-buttonshadow);
 }
 
 .keyboardbg .dark {
@@ -67,14 +69,17 @@
 }
 .wrapper #del {
   background-color: var(--theme1-delbg);
+  box-shadow: 0px 3px 2px var(--theme1-delshadow);
 }
 .lastrow #reset {
   width: 200px;
   background-color: var(--theme1-delbg);
+  box-shadow: 0px 3px 2px var(--theme1-delshadow);
 }
 #equal {
   width: 80px;
 }
 .lastrow #equal {
   background-color: var(--theme1-equalbg);
+  box-shadow: 0px 3px 2px var(--theme1-equalshadow);
 }
