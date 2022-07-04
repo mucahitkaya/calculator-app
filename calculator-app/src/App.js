@@ -10,9 +10,9 @@ function App() {
   const lightTheme = "light";
 
   const [themeStatus, setThemeStatus] = useState(true);
-  const [truthy,setTruthy]=useState(false);
-  const [sign,setSign]=useState("");
-  const [value, setValue] = useState("0");
+  const [total,setTotal]=useState("0");
+  const [sign,setSign]=useState("0");
+  const [firstValue, setFirstValue] = useState("0");
   const [secondvalue, setSecondValue] = useState("0");
 
   function handleClick(e) {
@@ -25,16 +25,50 @@ function App() {
     //KEYBOARD--
     else if (e.type === "submit") {
       //check for if there is not any input number but there is calculation sign input    
-      if(value==="0"&&isNaN(e.textContent))alert("Please enter number first!");
       
+      if(firstValue==="0"&&isNaN(e.textContent))alert("Please enter number first!");
+      else if(isNaN(e.textContent)===false){
+        if(sign==="0")setFirstValue((prevFirstValue)=>prevFirstValue+e.textContent);
+        else if(sign!=="0") {setSecondValue((prevSecondValue)=>prevSecondValue+e.textContent);}
+      }
+      else{
+        setSign(e.textContent)
+        switch(sign){
+          case "DEL":
+            alert("We Cannot Do That");
+            break;
+          case "RESET":
+            setTotal("0");
+            setFirstValue("0");
+            setSecondValue("0");
+            setSign("0");
+            break;
+          case "+":
+            setTotal(parseInt(firstValue)+parseInt(secondvalue));
+            setFirstValue("0");
+            setSecondValue("0");
+            setSign("0");
+            break;
+          case "-":
+            setTotal(firstValue-secondvalue);
+            setFirstValue("0");
+            setSecondValue("0");
+            setSign("0");
+            break;
+          case "=":
+            setFirstValue("0");
+            setSecondValue("0");
+            setSign("0");
+            break;
+          default:
+            console.log("nothing happend");
+        }
+      }
     }
-  
   }
- 
-  //  setValue((prevValue) => prevValue + `${clickedValue }`);
-    
-  
 
+ 
+  console.log(firstValue,secondvalue,sign,total);
   
   return (
     <div className={`App ${themeStatus ? lightTheme : darkTheme}`}>
@@ -42,7 +76,7 @@ function App() {
         handleClick={handleClick}
         theme={themeStatus ? lightTheme : darkTheme}
       />
-      <Screen value={value} theme={themeStatus ? lightTheme : darkTheme} />
+      <Screen value={total} theme={themeStatus ? lightTheme : darkTheme} />
       <Keyboard
         handleClick={handleClick}
         theme={themeStatus ? lightTheme : darkTheme}
